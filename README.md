@@ -1,36 +1,68 @@
-# alu-web_back_end
-Project Overview
-This project focuses on enhancing your understanding of type annotations in Python 3, including their application in specifying function signatures and variable types. You will also explore duck typing, and learn how to validate your code using the mypy tool.
+# Python - Variable Annotations
 
-Objectives
-By the end of this project, you should be able to:
+## Python Type Annotations
 
-Explain type annotations in Python 3 without external references.
-Use type annotations to specify function signatures and variable types effectively.
-Understand and apply the concept of duck typing in Python.
-Validate your Python code with mypy to ensure type correctness.
-Requirements
-All code must be written in Python 3 (version 3.7).
-Files should begin with the shebang line: #!/usr/bin/env python3.
-Each file must end with a new line.
-Follow the pycodestyle style guide (version 2.5).
-Ensure all files are executable.
-The project must include documentation for all modules, classes, and functions.
-Documentation Standards
-Each module should have a clear and concise docstring.
-Each class must include a docstring explaining its purpose.
-Each function, whether inside a class or standalone, should have a docstring detailing its functionality.
-To verify documentation, use the following commands:
+This project explores the implementation and usage of type annotations in Python 3, focusing on how they enhance code readability, maintainability, and reduce potential bugs through static type checking.
 
-bash
+### Learning Objectives
 
-Copy
-python3 -c 'print(__import__("my_module").__doc__)'
-python3 -c 'print(__import__("my_module").MyClass.__doc__)'
-python3 -c 'print(__import__("my_module").my_function.__doc__)'
-python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'
-File Length
-The length of your Python files will be tested using the wc command to ensure compliance with project standards.
+By the end of this project, you should be able to explain:
 
-Conclusion
-This project is designed to deepen your understanding of Python's typing system and improve code quality through proper documentation and validation methods.
+* Type annotations in Python 3
+* How to use type annotations to specify function signatures and variable types
+* Duck typing concepts and implementation
+* How to validate your code with `mypy`
+
+### Requirements
+
+#### General
+
+* All files are interpreted/compiled on Ubuntu 18.04 LTS using `python3` (version 3.7)
+* All files should end with a new line
+* The first line of all files should be exactly `#!/usr/bin/env python3`
+* Code should follow the `pycodestyle` style (version 2.5)
+* All files must be executable
+* All modules, classes, and functions must include appropriate documentation
+* Documentation should be comprehensive sentences explaining the purpose of modules, classes, or methods
+
+### Concepts Overview
+
+#$## Type Annotations in Python 3
+
+Type annotations were introduced in Python 3.5 through PEP 484. They provide a way to indicate the expected types of variables, function parameters, and return values. While Python remains dynamically typed, these annotations serve as hints to developers and tools.
+
+```python
+def greeting(name: str) -> str:
+    return f"Hello, {name}"
+```
+
+#### Function Signatures and Variable Types
+
+Type annotations enable specifying expected data types for:
+
+* Function parameters: `def process_data(data: list) -> None:`
+* Function return values: `def calculate_sum(a: int, b: int) -> int:`
+* Variables: `user_id: int = 42`
+
+#### Duck Typing
+
+Duck typing is a programming concept where the type or class of an object is less important than the methods it defines or the properties it has. The name comes from the saying: "If it looks like a duck, swims like a duck, and quacks like a duck, then it probably is a duck."
+
+Python is inherently duck-typed, but type annotations can help clarify expected behaviors while maintaining flexibility.
+
+#### Validating Code with `mypy`
+
+`mypy` is a static type checker for Python that helps catch common errors before runtime:
+
+```bash
+pip install mypy
+mypy your_file.py
+```
+
+### Project Structure
+
+This repository contains various examples and implementations demonstrating Python type annotations and related concepts.
+
+### Author
+
+Vanessa UWONKUNDA
