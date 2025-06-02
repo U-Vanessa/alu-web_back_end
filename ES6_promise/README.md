@@ -1,1 +1,0 @@
-Synchronous and Asynchronous JavaScript
